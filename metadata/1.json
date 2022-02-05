@@ -1,0 +1,21 @@
+{
+    "attributes" : [ {
+      "display_type" : "date",
+      "trait_type" : "birthday",
+      "value" : 1546360800
+    }, {
+      "trait_type" : "Sex",
+      "value" : "Male"
+    }, {
+      "trait_type" : "Eye color",
+      "value" : "Mocha"
+    }, {
+      "value" : "Chactor"
+    }, {
+      "trait_type" : "Age",
+      "value" : 14
+    } ],
+    "description" : "test shinji.",
+    "image" : "ipfs://QmQq5TeHT5ZQT8UdAKqm8prfWCUm99SWmxG5Y37CrnvTw5",
+    "name" : "shinji"
+}
