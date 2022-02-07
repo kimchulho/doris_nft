@@ -1,4 +1,8 @@
 {
+    "description" : "Doris #0",
+    "image" : "https://kimchulho.github.io/doris_nft/image/0.png",
+    "name" : "shinji",
+
     "attributes" : [ {
       "display_type" : "date",
       "trait_type" : "birthday",
@@ -15,7 +19,5 @@
       "trait_type" : "Age",
       "value" : 14
     } ],
-    "description" : "test shinji.",
-    "image" : "https://kimchulho.github.io/doris_nft/image/0.png",
-    "name" : "shinji"
+
 }
