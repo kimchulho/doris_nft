@@ -1,7 +1,7 @@
 {
-    "description" : "Doris #0",
+    "name" : "Doris #0",
+    "description" : "Doris doll",
     "image" : "https://kimchulho.github.io/doris_nft/image/0.png",
-    "name" : "shinji",
 
     "attributes" : [ {
       "display_type" : "date",
