@@ -6,6 +6,6 @@
     "attributes" : [
         { "trait_type" : "Charactor", "value" : "Harumi" },
         { "trait_type" : "Costume",   "value" : "Suite" },
-        { "trait_type" : "Level",     "value" : 10 },
+        { "trait_type" : "Level",     "value" : 10 }
     ]
 }
