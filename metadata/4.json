@@ -1,12 +1,21 @@
 {
-    "name" : "Doris #4",
-    "description" : "Cute dot doll",
-    "image" : "ipfs://QmQq5TeHT5ZQT8UdAKqm8prfWCUm99SWmxG5Y37CrnvTw5",
-
-    "attributes" : [
-        { "trait_type" : "Charactor", "value" : "Harumi" },
-	{ "trait_type" : "Costume",   "value" : "Padded coat" },
-	{ "trait_type" : "Level",     "value" : 10 },
-	{ "trait_type" : "Birthday",  "value" : 1265518636, "display_type" : "date" },
-    ]
+    "attributes" : [ {
+      "display_type" : "date",
+      "trait_type" : "birthday",
+      "value" : 1546360800
+    }, {
+      "trait_type" : "Sex",
+      "value" : "Male"
+    }, {
+      "trait_type" : "Eye color",
+      "value" : "Mocha"
+    }, {
+      "value" : "Chactor"
+    }, {
+      "trait_type" : "Age",
+      "value" : 14
+    } ],
+    "description" : "test shinji.",
+    "image" : "https://kimchulho.github.io/doris_nft/image/4.png",
+    "name" : "Doris 4"
 }
