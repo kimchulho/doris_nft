@@ -3,4 +3,9 @@
     "name" : "Doris #3",
     "description" : "Cute dot doll",
     "image" : "ipfs://QmQ6mnoRj3vM8M7BK87N87Fx1MhnY3dXMCHAtooUyeKbHz/3.png",
+    "attributes" : [
+        { "trait_type" : "Charactor", "value" : "Harumi" },
+        { "trait_type" : "Costume",   "value" : "Suite" },
+        { "trait_type" : "Level",     "value" : 10 }
+    ]
 }
