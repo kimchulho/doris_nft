@@ -1,21 +1,12 @@
 {
-    "attributes" : [ {
-      "display_type" : "date",
-      "trait_type" : "birthday",
-      "value" : 1546360800
-    }, {
-      "trait_type" : "Sex",
-      "value" : "Male"
-    }, {
-      "trait_type" : "Eye color",
-      "value" : "Mocha"
-    }, {
-      "value" : "Chactor"
-    }, {
-      "trait_type" : "Age",
-      "value" : 14
-    } ],
-    "description" : "test shinji.",
+    "name" : "Doris #2",
+    "description" : "Cute dot doll",
     "image" : "ipfs://QmQq5TeHT5ZQT8UdAKqm8prfWCUm99SWmxG5Y37CrnvTw5",
-    "name" : "shinji"
+
+    "attributes" : [
+        { "trait_type" : "Charactor", "value" : "Harumi" },
+	{ "trait_type" : "Costume",   "value" : "Sports" },
+	{ "trait_type" : "Level",     "value" : 10 },
+	{ "trait_type" : "Birthday",  "value" : 1265518636, "display_type" : "date" },
+    ]
 }

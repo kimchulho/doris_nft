@@ -1,11 +1,11 @@
 {
-    "name" : "Doris #1",
+    "name" : "Doris #0",
     "description" : "Cute dot doll",
     "image" : "ipfs://QmQq5TeHT5ZQT8UdAKqm8prfWCUm99SWmxG5Y37CrnvTw5",
 
     "attributes" : [
         { "trait_type" : "Charactor", "value" : "Harumi" },
-	{ "trait_type" : "Costume",   "value" : "Bikini" },
+	{ "trait_type" : "Costume",   "value" : "School uniform" },
 	{ "trait_type" : "Level",     "value" : 10 },
 	{ "trait_type" : "Birthday",  "value" : 1265518636, "display_type" : "date" },
     ]
