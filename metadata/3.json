@@ -1,7 +1,7 @@
 {
     "name" : "Doris #3",
     "description" : "Cute dot doll",
-    "image" : "ipfs://QmQq5TeHT5ZQT8UdAKqm8prfWCUm99SWmxG5Y37CrnvTw5",
+    "image" : "ipfs://QmQ6mnoRj3vM8M7BK87N87Fx1MhnY3dXMCHAtooUyeKbHz/3.png",
 
     "attributes" : [
         { "trait_type" : "Charactor", "value" : "Harumi" },
