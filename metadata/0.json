@@ -1,7 +1,7 @@
 {
-    "name" : "Doris #1",
-    "description" : "Doris doll",
+    "description" : "test doris.",
     "image" : "https://kimchulho.github.io/doris_nft/image/0.png",
+    "name" : "Doris #0",
     "attributes" : [ {
       "display_type" : "date",
       "trait_type" : "birthday",
@@ -16,7 +16,6 @@
       "value" : "Chactor"
     }, {
       "trait_type" : "Age",
-      "value" : 13
-    } ],
-
+      "value" : 13	
+    } ]
 }
