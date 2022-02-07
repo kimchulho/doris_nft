@@ -1,4 +1,7 @@
 {
+    "description" : "test doris.",
+    "image" : "https://kimchulho.github.io/doris_nft/image/4.png",
+    "name" : "Doris 4",
     "attributes" : [ {
       "display_type" : "date",
       "trait_type" : "birthday",
@@ -13,9 +16,6 @@
       "value" : "Chactor"
     }, {
       "trait_type" : "Age",
-      "value" : 14
-    } ],
-    "description" : "test shinji.",
-    "image" : "https://kimchulho.github.io/doris_nft/image/4.png",
-    "name" : "Doris 4"
+      "value" : 13
+    } ]
 }
