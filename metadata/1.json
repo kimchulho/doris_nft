@@ -1,7 +1,7 @@
 {
     "name" : "Doris #1",
     "description" : "Cute dot doll",
-    "image" : "ipfs://QmQq5TeHT5ZQT8UdAKqm8prfWCUm99SWmxG5Y37CrnvTw5",
+    "image" : "https://kimchulho.github.io/doris_nft/image/1.png",
 
     "attributes" : [
         { "trait_type" : "Charactor", "value" : "Harumi" },
