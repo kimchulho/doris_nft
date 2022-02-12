@@ -125,8 +125,8 @@ var strDownloadMime = "image/octet-stream";
             /* Model */
 
             var mtlLoader = new THREE.MTLLoader();
-            mtlLoader.setBaseUrl('http://kimchulho.com/work/domodomo/web3d/assets/');
-            mtlLoader.setPath('http://kimchulho.com/work/domodomo/web3d/assets/');
+            mtlLoader.setBaseUrl('assets/');
+            mtlLoader.setPath('assets/');
 			mtlLoader.setCrossOrigin(true);
 			mtlLoader.load('texture.mtl', function (materials) {
             //mtlLoader.load('ti.mtl', function (materials) {
@@ -141,7 +141,7 @@ var strDownloadMime = "image/octet-stream";
 
                 var objLoader = new THREE.OBJLoader();
                 objLoader.setMaterials(materials);
-                objLoader.setPath('http://kimchulho.com/work/domodomo/web3d/assets/');
+                objLoader.setPath('assets/');
                 objLoader.load('ti.obj', function (object) {
 					domodomoobj=object;
                     scene.add(object);
@@ -151,10 +151,10 @@ var strDownloadMime = "image/octet-stream";
             });
 
             var mtlLoader2 = new THREE.MTLLoader();
-            mtlLoader2.setBaseUrl('http://kimchulho.com/work/domodomo/web3d/assets/');
-            mtlLoader2.setPath('http://kimchulho.com/work/domodomo/web3d/assets/');
+            mtlLoader2.setBaseUrl('assets/');
+            mtlLoader2.setPath('assets/');
 			mtlLoader2.setCrossOrigin(true);
-			mtlLoader2.load('texture.php?texture=harumi', function (materials) {
+			mtlLoader2.load('texture_back.mtl', function (materials) {
             //mtlLoader.load('ti.mtl', function (materials) {
 
                 materials.preload();
@@ -167,7 +167,7 @@ var strDownloadMime = "image/octet-stream";
 
                 var objLoader = new THREE.OBJLoader();
                 objLoader.setMaterials(materials);
-                objLoader.setPath('http://kimchulho.com/work/domodomo/web3d/assets/');
+                objLoader.setPath('https://kimchulho.github.io/doris_nft/web3d/assets/');
                 objLoader.load('ti.obj', function (object) {
 					domodomoobj=object;
                     scene.add(object);
