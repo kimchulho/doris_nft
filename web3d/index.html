@@ -140,8 +140,8 @@ var strDownloadMime = "image/octet-stream";
             /* Model */
 
             var mtlLoader = new THREE.MTLLoader();
-            mtlLoader.setBaseUrl('assets/');
-            mtlLoader.setPath('assets/');
+            mtlLoader.setBaseUrl('https://kimchulho.github.io/doris_nft/web3d/assets/');
+            mtlLoader.setPath('https://kimchulho.github.io/doris_nft/web3d/assets/');
 			mtlLoader.load('texture.mtl', function (materials) {
             //mtlLoader.load('ti.mtl', function (materials) {
 
@@ -155,7 +155,7 @@ var strDownloadMime = "image/octet-stream";
 
                 var objLoader = new THREE.OBJLoader();
                 objLoader.setMaterials(materials);
-                objLoader.setPath('assets/');
+                objLoader.setPath('https://kimchulho.github.io/doris_nft/web3d/assets/');
                 objLoader.load('ti.obj', function (object) {
 					domodomoobj=object;
                     scene.add(object);
@@ -165,8 +165,8 @@ var strDownloadMime = "image/octet-stream";
             });
 
             var mtlLoader2 = new THREE.MTLLoader();
-            mtlLoader2.setBaseUrl('assets/');
-            mtlLoader2.setPath('assets/');
+            mtlLoader2.setBaseUrl('https://kimchulho.github.io/doris_nft/web3d/assets/');
+            mtlLoader2.setPath('https://kimchulho.github.io/doris_nft/web3d/assets/');
 			mtlLoader2.load('texture.mtl', function (materials) {
             //mtlLoader.load('ti.mtl', function (materials) {
 
@@ -180,7 +180,7 @@ var strDownloadMime = "image/octet-stream";
 
                 var objLoader = new THREE.OBJLoader();
                 objLoader.setMaterials(materials);
-                objLoader.setPath('assets/');
+                objLoader.setPath('https://kimchulho.github.io/doris_nft/web3d/assets/');
                 objLoader.load('ti.obj', function (object) {
 					domodomoobj=object;
                     scene.add(object);
