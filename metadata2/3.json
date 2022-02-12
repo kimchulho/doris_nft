@@ -1,0 +1,21 @@
+{
+    "name" : "Doris #1",
+    "description" : "test doris1.",
+    "image" : "ipfs://Qmd5gkLe6ZGXtmwPAHdanT9aGTT1zjR3KXS8JGLR8Ms3Ga/3.png",
+    "attributes" : [ {
+      "display_type" : "date",
+      "trait_type" : "birthday",
+      "value" : 1546360800
+    }, {
+      "trait_type" : "Sex",
+      "value" : "Male"
+    }, {
+      "trait_type" : "Eye color",
+      "value" : "Mocha"
+    }, {
+      "value" : "Chactor"
+    }, {
+      "trait_type" : "Age",
+      "value" : 11	
+    } ]
+}
