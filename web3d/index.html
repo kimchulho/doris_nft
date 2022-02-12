@@ -55,9 +55,10 @@
 <body id="domodomobody">
 
     <div class="left">
-		<p id="log">title<p>
-        <p>subtitle<p>
-		<p>pixeler<p>
+		<p id="reloadPage">Reload</p>
+		<p id="log">title</p>
+        <p>subtitle</p>
+		<p>pixeler</p>
         <p><a href="http://www.kimchulho.com/" target="_top">kimchulho.com</a></p>
     </div>
 <!--
@@ -89,16 +90,7 @@ var strDownloadMime = "image/octet-stream";
         animate();
 
         function init() {
-        var saveLink = document.createElement('div');
-        saveLink.style.position = 'absolute';
-        saveLink.style.top = '10px';
-        saveLink.style.width = '100%';
-        saveLink.style.background = '#FFFFFF';
-        saveLink.style.textAlign = 'center';
-        saveLink.innerHTML =
-            '<a href="#" id="saveLink">Save Frame</a>';
-        document.body.appendChild(saveLink);
-        document.getElementById("saveLink").addEventListener('click', saveAsImage);
+        document.getElementById("reloadPage").addEventListener('click', reloadPage);
 
             container = document.createElement('div');
 			container.id="domodomo3ddiv";
@@ -316,7 +308,7 @@ controls.maxPolarAngle = Math.PI/2;
 
         }
 
-   function saveAsImage() {
+   function reloadPage() {
         window.location.reload();
     }
 
