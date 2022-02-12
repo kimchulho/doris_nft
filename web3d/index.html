@@ -81,9 +81,8 @@
 var strDownloadMime = "image/octet-stream";
         init();
         animate();
-
-        function init() {
         document.getElementById("reloadPage").addEventListener('click', reloadPage);
+        function init() {
 
             container = document.createElement('div');
 			container.id="domodomo3ddiv";
@@ -151,10 +150,10 @@ var strDownloadMime = "image/octet-stream";
             });
 
             var mtlLoader2 = new THREE.MTLLoader();
-            mtlLoader2.setBaseUrl('assets/');
-            mtlLoader2.setPath('assets/');
+            mtlLoader2.setBaseUrl('http://www.kimchulho.com/work/domodomo/web3/assets/');
+            mtlLoader2.setPath('http://www.kimchulho.com/work/domodomo/web3/assets/');
 			mtlLoader2.setCrossOrigin(true);
-			mtlLoader2.load('texture_back.mtl', function (materials) {
+			mtlLoader2.load('texture.php?texture=harumi&back=true', function (materials) {
             //mtlLoader.load('ti.mtl', function (materials) {
 
                 materials.preload();
@@ -344,6 +343,6 @@ controls.maxPolarAngle = Math.PI/2;
     }
   }, false);*/
 </script>
-<
+
 </body>
 </html>
