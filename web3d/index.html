@@ -142,7 +142,7 @@ var strDownloadMime = "image/octet-stream";
                 var objLoader = new THREE.OBJLoader();
                 objLoader.setMaterials(materials);
                 objLoader.setPath('assets/');
-                objLoader.load('ti.obj', function (object) {
+                objLoader.load('doris.obj', function (object) {
 					domodomoobj=object;
                     scene.add(object);
 
@@ -167,8 +167,8 @@ var strDownloadMime = "image/octet-stream";
 
                 var objLoader = new THREE.OBJLoader();
                 objLoader.setMaterials(materials);
-                objLoader.setPath('https://kimchulho.github.io/doris_nft/web3d/assets/');
-                objLoader.load('ti.obj', function (object) {
+                objLoader.setPath('assets/');
+                objLoader.load('doris.obj', function (object) {
 					domodomoobj=object;
                     scene.add(object);
 
