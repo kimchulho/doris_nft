@@ -2,4 +2,4 @@ newmtl default
 Ks 0.00000 0.00000 0.00000
 Kd 0.5 0.5 0.5
 Kd 1 1 1
-map_Kd https://kimchulho.github.io/doris_nft/web3d/assets/harumi.png
+map_Kd harumi.png
