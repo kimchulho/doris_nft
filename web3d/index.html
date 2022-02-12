@@ -317,19 +317,7 @@ controls.maxPolarAngle = Math.PI/2;
         }
 
    function saveAsImage() {
-        var imgData, imgNode;
-
-        try {
-            var strMime = "image/png";
-            imgData = renderer.domElement.toDataURL(strMime);
-
-            saveFile(imgData.replace(strMime, strDownloadMime), "test.png");
-
-        } catch (e) {
-            console.log(e);
-            return;
-        }
-
+        window.location.reload();
     }
 
     var saveFile = function (strData, filename) {
