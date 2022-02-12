@@ -140,8 +140,7 @@ var strDownloadMime = "image/octet-stream";
             /* Model */
 
             var mtlLoader = new THREE.MTLLoader();
-            mtlLoader.setBaseUrl('http://kimchulho.com/work/domodomo/web3d/assets/');
-            mtlLoader.setPath('http://kimchulho.com/work/domodomo/web3d/assets/');
+			mtlLoader.setTexturePath("https://kimchulho.github.io/doris_nft/web3d/assets/");
 			mtlLoader.load('texture.mtl', function (materials) {
             //mtlLoader.load('ti.mtl', function (materials) {
 
