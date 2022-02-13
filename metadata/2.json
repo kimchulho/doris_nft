@@ -2,7 +2,8 @@
     "title":"DORIS",
     "name" : "Doris #2",
     "description" : "Cute dot doll",
-    "image" : "ipfs://QmQ6mnoRj3vM8M7BK87N87Fx1MhnY3dXMCHAtooUyeKbHz/2.png",
+    "image" : "https://kimchulho.github.io/doris_nft/image/2.png",
+    "animation_url" : "https://kimchulho.github.io/doris_nft/viewer/?id=2"
     "attributes" : [
         { "trait_type" : "Charactor", "value" : "Harumi" },
         { "trait_type" : "Costume",   "value" : "Sports" },
