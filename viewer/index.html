@@ -77,7 +77,7 @@
         }
 
         var container;
-		var domodomoobj;
+		var dorisobj;
         var camera,camera2, controls, scene, renderer;
         var lighting, ambient, keyLight, fillLight, backLight;
 
@@ -92,7 +92,7 @@ var strDownloadMime = "image/octet-stream";
         function init() {
 
             container = document.createElement('div');
-			container.id="domodomo3ddiv";
+			container.id="doris3ddiv";
             document.body.appendChild(container);
 
             /* Camera */
@@ -136,7 +136,7 @@ var strDownloadMime = "image/octet-stream";
                 objLoader.setMaterials(materials);
                 objLoader.setPath('3d/');
                 objLoader.load('doris.obj', function (object) {
-					domodomoobj=object;
+					dorisobj=object;
                     scene.add(object);
                 });
             });
@@ -159,7 +159,7 @@ var strDownloadMime = "image/octet-stream";
                 objLoader.setMaterials(materials);
                 objLoader.setPath('3d/');
                 objLoader.load('doris.obj', function (object) {
-					domodomoobj=object;
+					dorisobj=object;
                     scene.add(object);
                 });
             });
@@ -190,9 +190,9 @@ controls.maxPolarAngle = Math.PI/2;
 
             window.addEventListener('resize', onWindowResize, false);
             window.addEventListener('keydown', onKeyboardEvent, false);
-			document.getElementById("domodomo3ddiv").addEventListener('mouseup', onMouseUp, false);
-			document.getElementById("domodomo3ddiv").addEventListener('mousedown', onMouseDown, false);
-			document.getElementById("domodomo3ddiv").addEventListener('mousemove', onMouseMove, false);
+			document.getElementById("doris3ddiv").addEventListener('mouseup', onMouseUp, false);
+			document.getElementById("doris3ddiv").addEventListener('mousedown', onMouseDown, false);
+			document.getElementById("doris3ddiv").addEventListener('mousemove', onMouseMove, false);
 
         }
 
@@ -271,8 +271,8 @@ controls.maxPolarAngle = Math.PI/2;
 
         function animate() {
 			
-			//domodomoobj.rotation.x += 0.005;
-			//domodomoobj.rotation.z += 0.01;
+			//dorisobj.rotation.x += 0.005;
+			//dorisobj.rotation.z += 0.01;
 			renderer.render( scene, camera );
 
             requestAnimationFrame(animate);
