@@ -126,7 +126,7 @@
             /* Model */
 			var mtlSource = "newmtl default\nKd 1 1 1\nKs 0.00000 0.00000 0.00000\nmap_Kd "+getParam('id')+".png";
             var mtlLoader = new THREE.MTLParser();
-            mtlLoader.setBaseUrl('assets/');
+            mtlLoader.setBaseUrl('img/');
 			mtlLoader.setCrossOrigin(true);
 			mtlLoader.load(mtlSource, function (materials) {
                 materials.preload();
@@ -136,7 +136,7 @@
 				materials.materials.default.alphaTest = .5;
                 var objLoader = new THREE.OBJLoader();
                 objLoader.setMaterials(materials);
-                objLoader.setPath('assets/');
+                objLoader.setPath('img/');
                 objLoader.load('doris.obj', function (object) {
 					3dobj=object;
                     scene.add(object);
@@ -145,7 +145,7 @@
 
 			var mtlSource2 = "newmtl default\nKd 0.5 0.5 0.5\nKs 0.00000 0.00000 0.00000\nmap_Kd "+getParam('id')+".png";
             var mtlLoader2 = new THREE.MTLParser();
-            mtlLoader2.setBaseUrl('assets/');
+            mtlLoader2.setBaseUrl('img/');
 			mtlLoader2.setCrossOrigin(true);
 			mtlLoader2.load(mtlSource2, function (materials) {
                 materials.preload();
@@ -155,7 +155,7 @@
 				materials.materials.default.alphaTest = .5;
                 var objLoader = new THREE.OBJLoader();
                 objLoader.setMaterials(materials);
-                objLoader.setPath('assets/');
+                objLoader.setPath('img/');
                 objLoader.load('doris.obj', function (object) {
 					3dobj=object;
                     scene.add(object);
