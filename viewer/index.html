@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-
     <title>WebGL 3D Model Viewer Using three.js</title>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <script src="three.js"></script>
     <script src="Detector.js"></script>
     <script src="OrbitControls.js"></script>
@@ -52,32 +49,26 @@
     </style>
 
 </head>
-<body id="domodomobody">
+<body id="viewer_body">
 
     <div class="left">
 		<p id="reloadPage">Reload</p>
-        <!--<p><a href="http://www.kimchulho.com/" target="_top">kimchulho.com</a></p>-->
     </div>
 
 	<div class="right">
-		<img src="http://kimchulho.com/work/domodomo/domodomologo_white.svg" height="25px" style="opacity:0.5;" onclick="parent.toggleFullScreen()">
+		<img src="logo_white.svg" height="25px" style="opacity:0.5;" onclick="parent.toggleFullScreen()">
 	</div>
 
     <script>
-    // 파라메터 정보가 저장될 오브젝트
-    // common.js 같은 모든 페이지에서 로딩되는 js 파일에 넣어두면 됨.
     var getParam = function(key){
         var _parammap = {};
         document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function () {
             function decode(s) {
                 return decodeURIComponent(s.split("+").join(" "));
             }
- 
-            _parammap[decode(arguments[1])] = decode(arguments[2]);
+             _parammap[decode(arguments[1])] = decode(arguments[2]);
         });
-
 		result = _parammap[key] == null ? '0' : _parammap[key]
- 
         return result;
     };
 
@@ -103,22 +94,17 @@ var strDownloadMime = "image/octet-stream";
             container = document.createElement('div');
 			container.id="domodomo3ddiv";
             document.body.appendChild(container);
-			//document.getElementById("domodomo3ddiv").appendChild(container);
 
             /* Camera */
-
-            //camera = new THREE.PerspectiveCamera(10, window.innerWidth / window.innerHeight, 1, 1000);
             camera = new THREE.OrthographicCamera(window.innerWidth / (-2), window.innerWidth/2, window.innerHeight/2, window.innerHeight/(-2), 1, 1000);
-			camera.position.x = 10;//40
-			camera.position.y = 0;//20
-            camera.position.z = 20;//200
+			camera.position.x = 10;
+			camera.position.y = 0;
+            camera.position.z = 20;
 			camera.zoom = 12
 			camera.updateProjectionMatrix();
 
             /* Scene */
-
             scene = new THREE.Scene();
-
 			scene.position.y=-11;
             lighting = false;
 
@@ -133,9 +119,6 @@ var strDownloadMime = "image/octet-stream";
 
             backLight = new THREE.DirectionalLight(0xffffff, .05);
             backLight.position.set(100, 0, -100).normalize();
-			//scene.add(keyLight);
-			//scene.add(fillLight);
-			//scene.add(backLight);
 
             /* Model */
 			var mtlSource = "newmtl default\nKd 1 1 1\nKs 0.00000 0.00000 0.00000\nmap_Kd "+getParam('id')+".png";
@@ -143,26 +126,19 @@ var strDownloadMime = "image/octet-stream";
             mtlLoader.setBaseUrl('img/');
 			mtlLoader.setCrossOrigin(true);
 			mtlLoader.load(mtlSource, function (materials) {
-            //mtlLoader.load('ti.mtl', function (materials) {
-
                 materials.preload();
-
                 materials.materials.default.map.magFilter = THREE.NearestFilter;
                 materials.materials.default.map.minFilter = THREE.LinearFilter;
 				materials.materials.default.side = THREE.FrontSide;
-				//materials.materials.default.transparent = true;
 				materials.materials.default.alphaTest = .5;
-				materials.preload();
+
                 var objLoader = new THREE.OBJLoader();
                 objLoader.setMaterials(materials);
                 objLoader.setPath('3d/');
                 objLoader.load('doris.obj', function (object) {
 					domodomoobj=object;
                     scene.add(object);
-
                 });
-				materials.preload();
-
             });
 
 			var mtlSource2 = "newmtl default\nKd 0.5 0.5 0.5\nKs 0.00000 0.00000 0.00000\nmap_Kd "+getParam('id')+".png";
@@ -177,18 +153,15 @@ var strDownloadMime = "image/octet-stream";
                 materials.materials.default.map.magFilter = THREE.NearestFilter;
                 materials.materials.default.map.minFilter = THREE.LinearFilter;
 				materials.materials.default.side = THREE.BackSide;
-				//materials.materials.default.transparent = true;
 				materials.materials.default.alphaTest = .5;
-materials.preload();
+
                 var objLoader = new THREE.OBJLoader();
                 objLoader.setMaterials(materials);
                 objLoader.setPath('3d/');
                 objLoader.load('doris.obj', function (object) {
 					domodomoobj=object;
                     scene.add(object);
-
                 });
-materials.preload();
             });
 
 
@@ -334,7 +307,7 @@ controls.maxPolarAngle = Math.PI/2;
     }
     </script>
 <script>
-  var videoElement = document.getElementById("domodomobody");
+  var videoElement = document.getElementById("viewer_body");
     
   function toggleFullScreen() {
 	//controls.autoRotate=!controls.autoRotate;
