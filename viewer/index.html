@@ -92,6 +92,18 @@
 
 		function init() {
 
+        var saveLink = document.createElement('div');
+        saveLink.style.position = 'absolute';
+        saveLink.style.top = '10px';
+        saveLink.style.width = '100%';
+		saveLink.style.color = '#FFFFFF';
+        //saveLink.style.background = '#FFFFFF';
+        saveLink.style.textAlign = 'center';
+        saveLink.innerHTML =
+            '<a href="#" id="saveLink">SAVE</a>';
+        document.body.appendChild(saveLink);
+        document.getElementById("saveLink").addEventListener('click', saveAsImage);
+
             container = document.createElement('div');
 			container.id="3d_div";
             document.body.appendChild(container);
