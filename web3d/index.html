@@ -150,7 +150,7 @@ var strDownloadMime = "image/octet-stream";
 				materials.materials.default.side = THREE.FrontSide;
 				//materials.materials.default.transparent = true;
 				materials.materials.default.alphaTest = .5;
-
+				materials.preload();
                 var objLoader = new THREE.OBJLoader();
                 objLoader.setMaterials(materials);
                 objLoader.setPath('assets/');
@@ -159,6 +159,7 @@ var strDownloadMime = "image/octet-stream";
                     scene.add(object);
 
                 });
+				materials.preload();
 
             });
 
@@ -176,7 +177,7 @@ var strDownloadMime = "image/octet-stream";
 				materials.materials.default.side = THREE.BackSide;
 				//materials.materials.default.transparent = true;
 				materials.materials.default.alphaTest = .5;
-
+materials.preload();
                 var objLoader = new THREE.OBJLoader();
                 objLoader.setMaterials(materials);
                 objLoader.setPath('assets/');
@@ -185,7 +186,7 @@ var strDownloadMime = "image/octet-stream";
                     scene.add(object);
 
                 });
-
+materials.preload();
             });
 
 
