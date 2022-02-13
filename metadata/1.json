@@ -3,7 +3,7 @@
     "name" : "Doris #1",
     "description" : "Cute dot doll",
     "image" : "https://kimchulho.github.io/doris_nft/image/1.png",
-    "animation_url" : "https://kimchulho.github.io/doris_nft/viewer/?id=1"
+    "animation_url" : "https://kimchulho.github.io/doris_nft/viewer/?id=1",
     "attributes" : [
         { "trait_type" : "Charactor", "value" : "Harumi" },
         { "trait_type" : "Costume",   "value" : "Bikini" },
