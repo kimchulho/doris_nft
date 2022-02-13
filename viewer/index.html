@@ -86,7 +86,7 @@
         }
 
         var container;
-		var 3d_obj;
+		var domodomoobj;
         var camera,camera2, controls, scene, renderer;
         var lighting, ambient, keyLight, fillLight, backLight;
 
@@ -157,7 +157,7 @@ var strDownloadMime = "image/octet-stream";
                 objLoader.setMaterials(materials);
                 objLoader.setPath('3d/');
                 objLoader.load('doris.obj', function (object) {
-					3d_obj=object;
+					domodomoobj=object;
                     scene.add(object);
 
                 });
@@ -184,7 +184,7 @@ materials.preload();
                 objLoader.setMaterials(materials);
                 objLoader.setPath('3d/');
                 objLoader.load('doris.obj', function (object) {
-					3d_obj=object;
+					domodomoobj=object;
                     scene.add(object);
 
                 });
