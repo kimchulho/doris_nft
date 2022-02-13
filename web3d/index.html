@@ -149,7 +149,7 @@ var strDownloadMime = "image/octet-stream";
 
             });
 
-			var mtlSource2 = "newmtl default\nKd 0.5 0.5 0.5\nKs 0.00000 0.00000 0.00000\nmap_Kd "+getParam('id')+".png";
+			var mtlSource2 = "newmtl default\nKd 0.5 0.5 0.5\nKs 0.00000 0.00000 0.00000\nmap_Kd assets/"+getParam('id')+".png";
             var mtlLoader2 = new THREE.MTLLoader();
             mtlLoader2.setBaseUrl('assets/');
             mtlLoader2.setPath('assets/');
