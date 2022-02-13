@@ -77,7 +77,7 @@
         }
 
         var container;
-		var 3d_obj;
+		var dorisobj;
         var camera,camera2, controls, scene, renderer;
         var lighting, ambient, keyLight, fillLight, backLight;
 
@@ -138,7 +138,7 @@
                 objLoader.setMaterials(materials);
                 objLoader.setPath('3d/');
                 objLoader.load('doris.obj', function (object) {
-					3d_obj = object;
+					dorisobj=object;
                     scene.add(object);
                 });
             });
@@ -161,7 +161,7 @@
                 objLoader.setMaterials(materials);
                 objLoader.setPath('3d/');
                 objLoader.load('doris.obj', function (object) {
-					3d_obj = object;
+					dorisobj=object;
                     scene.add(object);
                 });
             });
