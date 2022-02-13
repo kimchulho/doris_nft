@@ -94,7 +94,7 @@
 		function init() {
 
             container = document.createElement('div');
-			container.id="3d_div";
+			container.id="doris3ddiv";
             document.body.appendChild(container);
 
             /* Camera */
@@ -189,9 +189,9 @@
             /* Events */
             window.addEventListener('resize', onWindowResize, false);
             window.addEventListener('keydown', onKeyboardEvent, false);
-			document.getElementById("3d_div").addEventListener('mouseup', onMouseUp, false);
-			document.getElementById("3d_div").addEventListener('mousedown', onMouseDown, false);
-			document.getElementById("3d_div").addEventListener('mousemove', onMouseMove, false);
+			document.getElementById("doris3ddiv").addEventListener('mouseup', onMouseUp, false);
+			document.getElementById("doris3ddiv").addEventListener('mousedown', onMouseDown, false);
+			document.getElementById("doris3ddiv").addEventListener('mousemove', onMouseMove, false);
 
         }
 
