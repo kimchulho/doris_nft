@@ -101,7 +101,7 @@ var strDownloadMime = "image/octet-stream";
         function init() {
 
             container = document.createElement('div');
-			container.id="3d_div";
+			container.id="domodomo3ddiv";
             document.body.appendChild(container);
 			//document.getElementById("domodomo3ddiv").appendChild(container);
 
@@ -217,9 +217,9 @@ controls.maxPolarAngle = Math.PI/2;
 
             window.addEventListener('resize', onWindowResize, false);
             window.addEventListener('keydown', onKeyboardEvent, false);
-			document.getElementById("3d_div").addEventListener('mouseup', onMouseUp, false);
-			document.getElementById("3d_div").addEventListener('mousedown', onMouseDown, false);
-			document.getElementById("3d_div").addEventListener('mousemove', onMouseMove, false);
+			document.getElementById("domodomo3ddiv").addEventListener('mouseup', onMouseUp, false);
+			document.getElementById("domodomo3ddiv").addEventListener('mousedown', onMouseDown, false);
+			document.getElementById("domodomo3ddiv").addEventListener('mousemove', onMouseMove, false);
 
         }
 
