@@ -60,17 +60,17 @@
 	</div>
 
     <script>
-    var getParam = function(key){
-        var _parammap = {};
-        document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function () {
-            function decode(s) {
-                return decodeURIComponent(s.split("+").join(" "));
-            }
-             _parammap[decode(arguments[1])] = decode(arguments[2]);
-        });
-		result = _parammap[key] == null ? '0' : _parammap[key]
-        return result;
-    };
+		var getParam = function(key){
+			var _parammap = {};
+			document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function () {
+				function decode(s) {
+					return decodeURIComponent(s.split("+").join(" "));
+				}
+				 _parammap[decode(arguments[1])] = decode(arguments[2]);
+			});
+			result = _parammap[key] == null ? '0' : _parammap[key]
+			return result;
+		};
 
         if (!Detector.webgl) {
             Detector.addGetWebGLMessage();
@@ -85,11 +85,13 @@
         var windowHalfY = window.innerHeight / 2;
 		var isMouseMove=false;
 		var isFullScreen=false;
-var strDownloadMime = "image/octet-stream";
+		var strDownloadMime = "image/octet-stream";
+
         init();
         animate();
         document.getElementById("reloadPage").addEventListener('click', reloadPage);
-        function init() {
+
+		function init() {
 
             container = document.createElement('div');
 			container.id="doris3ddiv";
@@ -164,9 +166,7 @@ var strDownloadMime = "image/octet-stream";
                 });
             });
 
-
             /* Renderer */
-
             renderer = new THREE.WebGLRenderer({
                     preserveDrawingBuffer: true
                 });
@@ -177,17 +177,16 @@ var strDownloadMime = "image/octet-stream";
             container.appendChild(renderer.domElement);
 
             /* Controls */
-
             controls = new THREE.OrbitControls(camera, renderer.domElement);
             controls.enableDamping = true;
             controls.dampingFactor = 0.25;
             controls.enableZoom = true;
 			controls.autoRotate = false;
 			controls.autoRotateSpeed = 3;
-controls.minPolarAngle = Math.PI/2;
-controls.maxPolarAngle = Math.PI/2;
-            /* Events */
+			controls.minPolarAngle = Math.PI/2;
+			controls.maxPolarAngle = Math.PI/2;
 
+            /* Events */
             window.addEventListener('resize', onWindowResize, false);
             window.addEventListener('keydown', onKeyboardEvent, false);
 			document.getElementById("doris3ddiv").addEventListener('mouseup', onMouseUp, false);
@@ -197,134 +196,104 @@ controls.maxPolarAngle = Math.PI/2;
         }
 
         function onWindowResize() {
-
             windowHalfX = window.innerWidth / 2;
             windowHalfY = window.innerHeight / 2;
-
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
-
             renderer.setSize(window.innerWidth, window.innerHeight);
-
         }
 
 		
 		function onMouseUp(e){
-			//document.getElementById("log").innerHTML="onMouseUp";
 			if(isMouseMove)
 				controls.autoRotate=false;
 		}
 
 		function onMouseDown(e){
-			//document.getElementById("log").innerHTML="onMouseDown";
 			if(isMouseMove)
 				controls.autoRotate=false;
 			else
 			{
-				//isFullScreen
 				controls.autoRotate=!controls.autoRotate;
 				isMouseMove = false;
 			}
 		}
 
 		function onMouseMove(e){
-			//isMouseMove = false;
-			//document.getElementById("log").innerHTML="isMouseMove:"+isMouseMove+" / "+camera2+" "+camera.position.x;
 			if(!controls.autoRotate)
 			{
-				//document.getElementById("log").innerHTML="onMouseMoveno"+" / "+camera2+" "+camera.position.x;
 				isMouseMove = false;
 			}
 			else
 			{
 				isMouseMove = true;
-				//document.getElementById("log").innerHTML="onMouseMove"+" / "+camera2+" "+camera.position.x;
 			}
 			
 		}
 
         function onKeyboardEvent(e) {
-
             if (e.code === 'KeyL') {
-
                 lighting = !lighting;
-
                 if (lighting) {
-
                     ambient.intensity = 0.25;
                     scene.add(keyLight);
                     scene.add(fillLight);
                     scene.add(backLight);
-
                 } else {
-
                     ambient.intensity = 1.0;
                     scene.remove(keyLight);
                     scene.remove(fillLight);
                     scene.remove(backLight);
-
                 }
-
             }
-
         }
 
         function animate() {
-			
-			//dorisobj.rotation.x += 0.005;
-			//dorisobj.rotation.z += 0.01;
 			renderer.render( scene, camera );
-
             requestAnimationFrame(animate);
-
             controls.update();
-
             render();
-
         }
 
         function render() {
-
             renderer.render(scene, camera);
-
         }
 
-   function reloadPage() {
-        window.location.reload();
-    }
+		function reloadPage() {
+			window.location.reload();
+		}
 
-    var saveFile = function (strData, filename) {
-        var link = document.createElement('a');
-        if (typeof link.download === 'string') {
-            document.body.appendChild(link); //Firefox requires the link to be in the body
-            link.download = filename;
-            link.href = strData;
-            link.click();
-            document.body.removeChild(link); //remove the link when done
-        } else {
-            location.replace(uri);
-        }
-    }
-    </script>
-<script>
-  var videoElement = document.getElementById("viewer_body");
-    
-  function toggleFullScreen() {
-	//controls.autoRotate=!controls.autoRotate;
-    if (!document.mozFullScreen && !document.webkitFullScreen) {
-      if (videoElement.mozRequestFullScreen) {
-        videoElement.mozRequestFullScreen();
-      } else {
-        videoElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
-      }
-    } else {
-      if (document.mozCancelFullScreen) {
-        document.mozCancelFullScreen();
-      } else {
-        document.webkitCancelFullScreen();
-      }
-    }
-  }
+		var saveFile = function (strData, filename) {
+			var link = document.createElement('a');
+			if (typeof link.download === 'string') {
+				document.body.appendChild(link); //Firefox requires the link to be in the body
+				link.download = filename;
+				link.href = strData;
+				link.click();
+				document.body.removeChild(link); //remove the link when done
+			} else {
+				location.replace(uri);
+			}
+		}
+
+		var videoElement = document.getElementById("viewer_body");
+		
+		function toggleFullScreen() {
+			//controls.autoRotate=!controls.autoRotate;
+			if (!document.mozFullScreen && !document.webkitFullScreen) {
+				if (videoElement.mozRequestFullScreen) {
+					videoElement.mozRequestFullScreen();
+				} else {
+					videoElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+				}
+			} else {
+				if (document.mozCancelFullScreen) {
+					document.mozCancelFullScreen();
+				} else {
+					document.webkitCancelFullScreen();
+				}
+			}
+		}
   /*
   document.addEventListener("keydown", function(e) {
     if (e.keyCode == 13) {
