@@ -276,7 +276,7 @@
 				var strMime = "image/png";
 				imgData = renderer.domElement.toDataURL(strMime);
 
-				saveFile(imgData.replace(strMime, strDownloadMime), "test.png");
+				saveFile(imgData.replace(strMime, strDownloadMime), getParam('id')+".png");
 
 			} catch (e) {
 				console.log(e);
