@@ -86,7 +86,7 @@
         }
 
         var container;
-		var domodomoobj;
+		var 3d_obj;
         var camera,camera2, controls, scene, renderer;
         var lighting, ambient, keyLight, fillLight, backLight;
 
@@ -101,7 +101,7 @@ var strDownloadMime = "image/octet-stream";
         function init() {
 
             container = document.createElement('div');
-			container.id="domodomo3ddiv";
+			container.id="3d_div";
             document.body.appendChild(container);
 			//document.getElementById("domodomo3ddiv").appendChild(container);
 
@@ -157,7 +157,7 @@ var strDownloadMime = "image/octet-stream";
                 objLoader.setMaterials(materials);
                 objLoader.setPath('3d/');
                 objLoader.load('doris.obj', function (object) {
-					domodomoobj=object;
+					3d_obj=object;
                     scene.add(object);
 
                 });
@@ -184,7 +184,7 @@ materials.preload();
                 objLoader.setMaterials(materials);
                 objLoader.setPath('3d/');
                 objLoader.load('doris.obj', function (object) {
-					domodomoobj=object;
+					3d_obj=object;
                     scene.add(object);
 
                 });
@@ -217,9 +217,9 @@ controls.maxPolarAngle = Math.PI/2;
 
             window.addEventListener('resize', onWindowResize, false);
             window.addEventListener('keydown', onKeyboardEvent, false);
-			document.getElementById("domodomo3ddiv").addEventListener('mouseup', onMouseUp, false);
-			document.getElementById("domodomo3ddiv").addEventListener('mousedown', onMouseDown, false);
-			document.getElementById("domodomo3ddiv").addEventListener('mousemove', onMouseMove, false);
+			document.getElementById("3d_div").addEventListener('mouseup', onMouseUp, false);
+			document.getElementById("3d_div").addEventListener('mousedown', onMouseDown, false);
+			document.getElementById("3d_div").addEventListener('mousemove', onMouseMove, false);
 
         }
 
