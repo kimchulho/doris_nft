@@ -109,6 +109,18 @@
 			scene.position.y=-11;
             lighting = false;
 
+            ambient = new THREE.AmbientLight(0xffffff, 1);
+            scene.add(ambient);
+
+            keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 10%, 15%)'), .05);
+            keyLight.position.set(-100, 0, 100);
+
+            fillLight = new THREE.DirectionalLight(new THREE.Color('hsl(240, 100%, 75%)'), .05);
+            fillLight.position.set(100, 0, 100);
+
+            backLight = new THREE.DirectionalLight(0xffffff, .05);
+            backLight.position.set(100, 0, -100).normalize();
+
             /* Model */
 			var mtlSource = "newmtl default\nKd 1 1 1\nKs 0.00000 0.00000 0.00000\nmap_Kd "+getParam('id')+".png";
             var mtlLoader = new THREE.MTLParser();
