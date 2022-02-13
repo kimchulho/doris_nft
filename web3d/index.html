@@ -11,7 +11,7 @@
     <script src="Detector.js"></script>
     <script src="OrbitControls.js"></script>
     <script src="OBJLoader.js"></script>
-    <script src="MTLLoader.js"></script>
+    <script src="MTLParser.js"></script>
 
     <style>
         body {
@@ -123,7 +123,7 @@ var strDownloadMime = "image/octet-stream";
 
             /* Model */
 			var mtlSource = "newmtl default\nKd 1 1 1\nKs 0.00000 0.00000 0.00000\nmap_Kd "+getParam('id')+".png";
-            var mtlLoader = new THREE.MTLLoader();
+            var mtlLoader = new THREE.MTLParser();
             mtlLoader.setBaseUrl('assets/');
             mtlLoader.setPath('assets/');
 			mtlLoader.setCrossOrigin(true);
@@ -150,7 +150,7 @@ var strDownloadMime = "image/octet-stream";
             });
 
 			var mtlSource2 = "newmtl default\nKd 0.5 0.5 0.5\nKs 0.00000 0.00000 0.00000\nmap_Kd assets/"+getParam('id')+".png";
-            var mtlLoader2 = new THREE.MTLLoader();
+            var mtlLoader2 = new THREE.MTLParser();
             mtlLoader2.setBaseUrl('assets/');
             mtlLoader2.setPath('assets/');
 			mtlLoader2.setCrossOrigin(true);
