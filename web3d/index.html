@@ -138,8 +138,7 @@ var strDownloadMime = "image/octet-stream";
             /* Model */
 			var mtlSource = "newmtl default\nKd 1 1 1\nKs 0.00000 0.00000 0.00000\nmap_Kd "+getParam('id')+".png";
             var mtlLoader = new THREE.MTLParser();
-            mtlLoader.setBaseUrl('assets/');
-            mtlLoader.setPath('assets/');
+            mtlLoader.setBaseUrl('https://kimchulho.github.io/doris_nft/web3d/assets/');
 			mtlLoader.setCrossOrigin(true);
 			mtlLoader.load(mtlSource, function (materials) {
             //mtlLoader.load('ti.mtl', function (materials) {
@@ -165,8 +164,7 @@ var strDownloadMime = "image/octet-stream";
 
 			var mtlSource2 = "newmtl default\nKd 0.5 0.5 0.5\nKs 0.00000 0.00000 0.00000\nmap_Kd 1.png";
             var mtlLoader2 = new THREE.MTLParser();
-            mtlLoader2.setBaseUrl('assets/');
-            mtlLoader2.setPath('assets/');
+            mtlLoader2.setBaseUrl('https://kimchulho.github.io/doris_nft/web3d/assets/');
 			mtlLoader2.setCrossOrigin(true);
 			mtlLoader2.load(mtlSource2, function (materials) {
             //mtlLoader.load('ti.mtl', function (materials) {
