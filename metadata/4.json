@@ -3,7 +3,7 @@
     "name" : "Doris #4",
     "description" : "Cute dot doll",
     "image" : "https://kimchulho.github.io/doris_nft/image/4.png",
-    "animation_url" : "http://kimchulho.com/out/demo/demo.html?cy=254&cp=8957",
+    "animation_url" : "https://ebruneton.github.io/black_hole_shader/demo/demo.html",
     "attributes" : [
         { "trait_type" : "Charactor", "value" : "Harumi" },
         { "trait_type" : "Costume",   "value" : "Padded coat" },
